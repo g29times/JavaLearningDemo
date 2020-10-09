@@ -16,7 +16,7 @@ public class MyClassTransformer implements ClassFileTransformer {
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
         if (!className.equals("aop/demo/service/AopDemoServiceWithoutInterface")) {
-            return null;
+            return "DEFAULT".getBytes();
         }
         try {
             System.out.println("MyClassTransformer，当前类名:" + className);

@@ -5,11 +5,20 @@ package aop.demo.service;
  * @date: 2019-11-06 11:58
  */
 public class AopDemoProxy implements AopDemoService {
+
     private AopDemoService targetService = new AopDemoServiceImpl();
+
     @Override
-    public void sayHello() {
+    public String sayHello() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("start");
         System.out.println("start");
-        targetService.sayHello();
+
+        builder.append(targetService.sayHello());
+
+        builder.append("end");
         System.out.println("end");
+
+        return builder.toString();
     }
 }

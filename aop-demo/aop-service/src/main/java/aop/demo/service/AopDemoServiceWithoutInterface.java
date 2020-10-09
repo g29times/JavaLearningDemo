@@ -8,11 +8,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AopDemoServiceWithoutInterface {
-    public void sayHello() {
-        System.out.println("hello(normal method)");
+
+    public String sayHello() {
+        String ret = "hello(normal method)";
+        System.out.println(ret);
+        return ret;
     }
 
-    public final void sayHelloFinal() {
-        System.out.println("hello(final method)");
+    public final String sayHelloFinal() {
+        String ret = "hello(final method)";
+        System.out.println(ret);
+        return ret;
     }
+
 }

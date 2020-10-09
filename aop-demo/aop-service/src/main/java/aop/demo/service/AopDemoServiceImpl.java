@@ -4,9 +4,12 @@ package aop.demo.service;
  * @author: chenyin
  * @date: 2019-10-29 15:05
  */
-public class AopDemoServiceImpl implements AopDemoService  {
+public class AopDemoServiceImpl implements AopDemoService {
+
     @Override
-    public void sayHello() {
-        System.out.println("hello this is aop demo service");
+    public String sayHello() {
+        String ret = "hello this is aop service";
+        System.out.println(ret);
+        return ret;
     }
 }

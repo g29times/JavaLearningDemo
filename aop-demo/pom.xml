@@ -11,6 +11,7 @@
 
     <artifactId>aop-demo</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>java-proxy</module>
         <module>aspectJ</module>
@@ -18,7 +19,7 @@
         <module>javaassist</module>
         <module>aop-service</module>
         <module>java-agent</module>
-        <module>attach-agent</module>
+        <module>java-agent-attach</module>
         <module>aop-web</module>
     </modules>
 
