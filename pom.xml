@@ -9,12 +9,14 @@
         <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.chenyin</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>github-chenyin-java_learning_demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>JavaLearningDemo</name>
-    <description>Demo project for Java</description>
+    <name>github-chenyin-java_learning_demo</name>
+    <description>Java Learning Demo</description>
     <packaging>pom</packaging>
+
     <modules>
         <!--演示logback mdc的使用-->
         <module>logback-mdc-demo</module>

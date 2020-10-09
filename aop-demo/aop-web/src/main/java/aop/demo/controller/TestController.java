@@ -28,13 +28,14 @@ public class TestController {
         aopDemoServiceWithoutInterface.sayHelloFinal();
         return "success";
     }
+
     @GetMapping("/attachAgentTest")
     public String attachAgentTest(String pid) throws Exception {
         if (StringUtils.isEmpty(pid)) {
             return "pid can not be empty";
         }
         VirtualMachine vm = VirtualMachine.attach(pid);
-        vm.loadAgent("/Users/chenyin/IdeaProjects/JavaLearningDemo/out/artifacts/attach_agent_jar/attach-agent.jar");
+        vm.loadAgent("D:\\WorkSpace\\JavaLearningDemo\\aop-demo\\attach-agent\\target\\attach-agent-0.0.1-SNAPSHOT.jar");
         vm.detach();
         return "success";
     }

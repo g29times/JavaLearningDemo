@@ -15,7 +15,7 @@ import java.security.ProtectionDomain;
 public class MyClassTransformer implements ClassFileTransformer {
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-        if (!className.equals("aop/demo/service/AopDemoServiceWithoutInterface")) {
+        if (!"aop/demo/service/AopDemoServiceWithoutInterface".equals(className)) {
             return null;
         }
         try {

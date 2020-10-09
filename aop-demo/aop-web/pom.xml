@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>aop-web</artifactId>
+    <packaging>jar</packaging>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -25,9 +27,33 @@
             <artifactId>tools</artifactId>
             <version>1.8.0</version>
             <scope>system</scope>
-            <systemPath>/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/tools.jar</systemPath>
+            <systemPath>D:/Program Files/Java/jdk1.8.0_112/lib/tools.jar</systemPath>
         </dependency>
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.0.RELEASE</version>
+                <executions>
+                    <execution>
+                        <!-- 多打一个可执行的包 把依赖都打包进来 -->
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <!--<configuration>-->
+                        <!--<classifier>exec</classifier>-->
+                        <!--</configuration>-->
+                    </execution>
+                </executions>
+                <!-- 另一个包的后缀名 -->
+                <configuration>
+                    <classifier>fat</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

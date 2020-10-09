@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>attach-agent</artifactId>
+    <artifactId>java-agent-attach</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,6 +19,8 @@
         <dependency>
             <groupId>com.chenyin</groupId>
             <artifactId>aop-service</artifactId>
+            <scope>system</scope>
+            <systemPath>D:/REPOSITORY/maven/com/chenyin/aop-service/0.0.1-SNAPSHOT/aop-service-0.0.1-SNAPSHOT.jar</systemPath>
         </dependency>
     </dependencies>
 
