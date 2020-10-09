@@ -34,6 +34,15 @@ public class TestController {
         return aopDemoServiceWithoutInterface.sayHelloFinal();
     }
 
+    /**
+     * linux
+     * 1. 问题 java.lang.NoClassDefFoundError: com/sun/tools/attach/VirtualMachine
+     * 1. 解决 nohup java -Xbootclasspath/a:/usr/lib/jvm/java-8-oracle/lib/tools.jar -jar aop-demo/aop-web/target/aop-web-0.0.1-SNAPSHOT-fat.jar &
+     * 2. attach api https://blog.csdn.net/youyou1543724847/article/details/84952218
+     * @param pid
+     * @return
+     * @throws Exception
+     */
     @GetMapping("/attachAgentTest")
     public String attachAgentTest(String pid) throws Exception {
         if (StringUtils.isEmpty(pid)) {
